@@ -41,3 +41,22 @@ LinkedIn → [linkedin.com/in/bibekkhatiwara](https://www.linkedin.com/in/bibekk
 git clone https://github.com/Bibek09/mt-code-ai.git
 cd mt-code-ai
 mvn clean test -Dcucumber.filter.tags="@smoke"
+
+
+@payments @iso20022
+Feature: Cross-Border & Real-Time Payment Processing
+
+  Scenario: SEPA Instant Credit Transfer
+    Given User is logged into Internet Banking with masked accounts
+    When User initiates SEPA Instant payment of EUR 5000 to DE89370400440532013000
+    And System performs real-time sanctions screening
+    Then Payment status is "Completed" within 10 seconds
+    And ISO 20022 pain.001 message schema is valid
+    And Audit trail is stored in MongoDB
+
+
+Just paste the above → commit → and your README will look professional and recruiter-ready immediately!
+
+After you update it, reply here with “Done” and I’ll check the live version and give final polish tips + help you add the Loom video and GitHub Actions badge so it becomes 100% perfect.
+
+You’re just one click away from a portfolio that gets you interviews at top banks and fintechs!
